@@ -4,6 +4,14 @@
 
 ## Building
 
+To set up the environment you can do
+```sh
+nix develop
+```
+which will pull the `tree-sitter` CLI (and `node`) from the nixpkgs/unstable forge.  
+
+> TODO: Should probably get the C compiler toolchain as well, just in case.
+
 ```sh
 tree-sitter generate
 tree-sitter build
