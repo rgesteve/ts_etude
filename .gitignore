@@ -1,2 +1,9 @@
 # Emacs artifacts
 *~
+
+# tree-sitter generates native libraries (and wasm modules, but I'll get to ignoring those later)
+*.so
+src/
+node_modules/
+build/
+
