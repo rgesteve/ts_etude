@@ -1,0 +1,6 @@
+tracepoint:syscalls:sys_enter_openat / comm == "tree-sitter" /
+{
+  if (strcontains(str(args->filename), ".so") || strcontains(str(args->filename), ".dylib")) {
+    printf("tree-sitter read %s\n", str(args->filename));
+  }
+}
