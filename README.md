@@ -32,3 +32,7 @@ tree-sitter parse input.test
 which should output the parse tree in the s-expression syntax `tree-sitter` uses.
 
 > NOTE: `tree-sitter build` (at least in version 0.25.6) is actually *not* necessary to have `tree-sitter test` run the grammar on the tests, as `tree-sitter test` will re-compile and use a freshly-created library every time (well, freshly pulled from a cache).  I haven't bothered to check if this design is experimental, but if you're curious of whether your installation behaves similarly (and you're running on Linux), you could use the "trace_ts_test" `bpftrace` script provided.
+
+## Node bindings
+
+After some difficulty getting this to work (mostly due to my not being familiar with `node-gyp`) I got the bindings to build and pass the test.  This was *only* after installing a version of the `tree-sitter` module from `npm` closer to the `tree-sitter` CLI, looks like I was getting bit by an ABI breaking change.
